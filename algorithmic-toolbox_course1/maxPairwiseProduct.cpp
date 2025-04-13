@@ -7,15 +7,15 @@ using std::vector;
 using std::cout;
 using std::cin;
 
-int maxPairwiseProduct(const vector<int>& numbers) {
-    int result = 0;
+long long maxPairwiseProduct(const vector<int>& numbers) {
+    long long result = 0;
 
     int n = numbers.size();
 
     for (int i = 0; i < n; ++i) {
         for (int j = i + 1; j < n; ++j) {
-            if(result < numbers[i] * numbers[j])
-                result = numbers[i] * numbers[j];
+            if(result < ((long long)numbers[i]) * numbers[j])
+                result = ((long long)numbers[i]) * numbers[j];
         }
     }
 
