@@ -15,7 +15,7 @@ long long fast_maxPairwiseProduct(const vector<int>& numbers){
     }
 
     for (int i = 0; i < numbers.size(); ++i) {
-        if((i != index1) && ((index2 == -1)  || numbers[index2] < numbers[i]))
+        if(index1 != i && (index2 == -1 || numbers[index2] < numbers[i]))
             index2 = i;
     }
 
